@@ -1,0 +1,29 @@
+class calculator {
+    void calculator(int a) {
+        System.out.println("Parent int");
+    }
+
+    void calculator(double a) {
+        System.out.println("Parent double");
+    }
+}
+
+class advancedcalculator extends calculator {
+    @Override
+    void calculator(int a) {
+        System.out.println("Child int");
+    }
+
+    void calculator(long a) {
+        System.out.println("Child long");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        calculator c = new advancedcalculator();
+
+        c.calculator(10);
+        c.calculator(10.5);
+    }
+}
