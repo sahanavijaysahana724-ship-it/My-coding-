@@ -1,0 +1,22 @@
+class Employee {
+    int salary = 2000;
+
+    void display() {
+        System.out.println("Employee salary:" + salary);
+    }
+}
+
+class Manager extends Employee {
+    int salary = 3000;
+    void display() {
+        System.out.println("Manager salary:" + salary);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee e = new Manager();
+        System.out.println(e.salary);
+        e.display();
+    }
+}
